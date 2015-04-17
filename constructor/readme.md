@@ -1,4 +1,4 @@
-### The Constructor Pattern
+### [The Constructor Pattern](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#constructorpatternjavascript)
 
 #### Object Creation
 

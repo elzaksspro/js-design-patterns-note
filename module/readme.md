@@ -1,4 +1,4 @@
-### The Module Pattern
+### [The Module Pattern](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript)
 
 #### Modules
 In Javascript, there are several options for implementing modules. These include:
@@ -205,6 +205,32 @@ console.log(basketModule.getItemCount());
 // Output: 0.8
 console.log(basketModule.getTotal());
 ```
+
+#### Module Pattern Variations
+
+##### Import mixins
+
+This effectively allows us to import them and locally alias them as we wish
+
+[demo05]()
+
+```javascript
+// Global module
+var myModule = (function (JQ, _) {
+    function privateMethod1() {
+        jQ('.container').html('test');
+    }
+    function privateMethod2() {
+        console.log(_.min([10, 5, 100, 2, 10000]));
+    }
+    return {
+        publicMethod: function () {
+            privateMethod1();
+        }
+    };
+})(jQuery, _);
+```
+
 
 
 
